@@ -9,7 +9,7 @@ var allowedOrigins = Configuration.GetSection("AllowedOrigins").Value.Split(';')
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
     {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Todo API", Description = "Keep track of your tasks", Version = "v1" });
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "Todo API", Description = "All tasks", Version = "v1" });
     });
 builder.Services.AddCors(options =>
 {
