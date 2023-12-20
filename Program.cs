@@ -3,6 +3,8 @@ using Microsoft.OpenApi.Models;
 // Initiate a web app builder
 var builder = WebApplication.CreateBuilder(args);
 
+var allowedOrigins = Configuration.GetSection("AllowedOrigins").Value.Split(';');
+
 // Add services to the container
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -13,7 +15,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
+        policy.WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
