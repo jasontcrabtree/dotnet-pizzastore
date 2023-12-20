@@ -3,7 +3,7 @@ using Microsoft.OpenApi.Models;
 // Initiate a web app builder
 var builder = WebApplication.CreateBuilder(args);
 
-var allowedOrigins = Configuration.GetSection("AllowedOrigins").Value.Split(';');
+var allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Value.Split(';');
 
 // Add services to the container
 builder.Services.AddEndpointsApiExplorer();
