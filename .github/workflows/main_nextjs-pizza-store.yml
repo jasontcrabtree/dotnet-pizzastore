@@ -54,4 +54,4 @@ jobs:
           app-name: 'nextjs-pizza-store'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8193B78B0F824545AC21E689D8DC8B95 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_16F0B115553B45B6ABB22C977D2DDABC }}
